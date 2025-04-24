@@ -6,11 +6,11 @@ export default function Jumbotron() {
           <p className="text-xl md:text-2xl lg:text-3xl font-light text-gray-200">
             Hello, world, my name is
           </p>
-          <h1 className="text-[26px] md:text-[60px] font-bold text-white">
+          <h1 className="text-[32px] md:text-[60px] font-bold text-white">
             Muhammad Sultan.
           </h1>
-          <p className="text-[22px] md:text-[40px] lg:text-[56px] font-bold text-stone-300">
-            I bring designs to life on the web.
+          <p className="text-[22px] md:text-[40px] lg:text-[56px] font-bold text-green-300">
+            And i bring designs to life.
           </p>
         </div>
         <p className="text-md md:text-2xl font-light text-stone-300 max-w-xl">
