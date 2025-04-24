@@ -5,9 +5,5 @@ type MainProps = {
 };
 
 export default function Main({ children }: MainProps) {
-  return (
-    <div className="ml-[10%] mr-[10%] w-[80%] min-h-[calc(100vh-128px)]">
-      {children}
-    </div>
-  );
+  return <div className="w-full mx-10 md:mx-20">{children}</div>;
 }

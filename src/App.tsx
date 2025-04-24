@@ -5,18 +5,20 @@ import Links from "./components/Links";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Experiences from "./components/Experiences";
 
 function App() {
   return (
     <>
       <Navbar />
-      <main className="flex w-full min-h-full h-screen overflow-y-auto">
+      <main className="flex h-screen">
         <Sidebar position="left">
           <Links />
         </Sidebar>
         <Main>
           <Jumbotron />
           <About />
+          <Experiences />
         </Main>
         <Sidebar position="right">
           <Email />
