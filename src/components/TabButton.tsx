@@ -7,15 +7,16 @@ type TabProps = {
 
 export default function Tab({ selectedTabProps, onTabClick }: TabProps) {
   return (
-    <div className="w-[25%] flex flex-col">
+    <div className="w-full md:w-[25%] flex md:flex-col">
       {EXPERIENCES.map((exp, index) => (
         <button
           key={index}
-          className={`py-3 px-4 text-left text-sm font-light ${
-            selectedTabProps === index
-              ? "text-white border-l-2 border-green-400"
-              : "text-stone-300 border-l-2 border-stone-700"
-          } focus:outline-none hover:bg-stone-800 transition-colors`}
+          className={`w-full py-3 px-8 md:px-4 md:text-left text-sm font-medium
+        ${
+          selectedTabProps === index
+            ? "text-white border-b-2 md:border-b-0 md:border-l-2 border-green-400"
+            : "text-stone-500 border-b-2 md:border-b-0 md:border-l-2 border-stone-700"
+        } focus:outline-none hover:bg-stone-800 transition-colors`}
           onClick={() => onTabClick(index)}
           aria-selected={selectedTabProps === index}
           role="tab"

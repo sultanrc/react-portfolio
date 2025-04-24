@@ -42,7 +42,7 @@ export default function Navbar() {
               isOpen ? "rotate-90" : "rotate-0"
             }`}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={36} /> : <Menu size={36} />}
           </div>
         </button>
       </div>

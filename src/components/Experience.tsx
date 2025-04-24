@@ -6,17 +6,19 @@ type ExperienceProps = {
 export default function Experience({ selectedTabProps }: ExperienceProps) {
   const experience = EXPERIENCES[selectedTabProps];
   return (
-    <div className="w-[75%] flex flex-col">
-      <div className="flex gap-3 text-lg">
-        <h2>{experience.role}</h2>
-        <h2 className="text-green-200">@ {experience.company}</h2>
+    <div className="md:w-[75%] flex flex-col">
+      <div className="flex flex-col lg:flex-row lg:gap-3">
+        <h2 className="text-lg">{experience.role}</h2>
+        <h2 className="text-green-200 text-sm md:text-lg">
+          @ {experience.company}
+        </h2>
       </div>
-      <p className="text-stone-500 text-sm font-semibold">
+      <p className="text-stone-500 text-sm mt-1 md:mt-0 md:text-lg">
         {experience.period}
       </p>
-      <ul className="list-disc h-64 pl-5 mt-4 space-y-3 text-stone-400 leading-relaxed ">
-        {experience.responsibilities.map((item, idx) => (
-          <li key={idx}>{item}</li>
+      <ul className="text-sm md:text-lg list-disc h-[360px] pl-5 mt-4 space-y-3 text-stone-400 leading-relaxed">
+        {experience.responsibilities.map((exp, id) => (
+          <li key={id}>{exp}</li>
         ))}
       </ul>
     </div>

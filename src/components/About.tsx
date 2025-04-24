@@ -5,16 +5,16 @@ import { ABOUT } from "../constants/about";
 
 export default function About() {
   return (
-    <div className="flex items-center min-h-screen text-white bg-primary px-40">
-      <div className="flex gap-20">
-        <div className="w-3/5 flex flex-col">
+    <div className="flex items-center min-h-screen text-white bg-primary mx-4 md:mx-20 lg:mx-40">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+        <div className="lg:w-3/5 flex flex-col">
           <MainHeader headerNumber="1" headerName="About Me" />
 
           <div>
             {ABOUT.map((aboutParagraph, index) => (
               <p
                 key={index}
-                className="text-md text-stone-400 mb-4 leading-relaxed"
+                className="text-xs md:text-[16px] text-stone-400 mb-4 leading-relaxed"
               >
                 {aboutParagraph}
               </p>
@@ -25,7 +25,8 @@ export default function About() {
         </div>
         <img
           src={profileImage}
-          className="w-2/5 h-[400px] object-cover border-2 border-white rounded-xl mt-4"
+          alt="Profile"
+          className="w-full max-w-md lg:max-w-2xl lg:w-2/5 h-[320px] md:h-auto aspect-[3/4] object-cover border-2 border-white rounded-xl mx-auto lg:mx-0 mt-4"
         />
       </div>
     </div>
