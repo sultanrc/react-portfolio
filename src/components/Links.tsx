@@ -3,7 +3,7 @@ import { LINKS } from "../constants/about";
 export default function Links() {
   const iconClass = "w-6 h-6 cursor-pointer";
   return (
-    <div className="flex flex-col items-start gap-10 mb-10">
+    <div className="flex lg:flex-col items-center justify-center lg:items-start gap-10 mb-6 lg:mb-10">
       {LINKS.map((link) => (
         <a
           key={link.alt}
