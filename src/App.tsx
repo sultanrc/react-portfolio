@@ -6,6 +6,9 @@ import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Jumbotron />
           <About />
           <Experiences />
+          <Projects />
+          <Contact />
+          <Footer />
         </Main>
         <Sidebar position="right">
           <Email />

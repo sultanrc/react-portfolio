@@ -13,10 +13,10 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
           @ {experience.company}
         </h2>
       </div>
-      <p className="text-stone-500 text-sm mt-1 md:mt-0 md:text-lg">
+      <p className="text-stone-500 text-sm mt-1 md:mt-0 md:text-md">
         {experience.period}
       </p>
-      <ul className="text-sm md:text-lg list-disc h-[360px] pl-5 mt-4 space-y-3 text-stone-400 leading-relaxed">
+      <ul className="text-sm md:text-[15px] list-disc h-[360px] pl-5 mt-4 space-y-3 text-stone-400 leading-relaxed">
         {experience.responsibilities.map((exp, id) => (
           <li key={id}>{exp}</li>
         ))}
