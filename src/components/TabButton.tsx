@@ -7,11 +7,11 @@ type TabProps = {
 
 export default function Tab({ selectedTabProps, onTabClick }: TabProps) {
   return (
-    <div className="w-full md:w-[25%] flex md:flex-col">
+    <div className="w-full md:w-[25%] flex md:flex-col ">
       {EXPERIENCES.map((exp, index) => (
         <button
           key={index}
-          className={`w-full py-3 px-8 md:px-4 md:text-left text-sm font-medium
+          className={`py-3 px-8 md:px-4 md:text-left text-sm font-medium
         ${
           selectedTabProps === index
             ? "text-white border-b-2 md:border-b-0 md:border-l-2 border-green-400"
