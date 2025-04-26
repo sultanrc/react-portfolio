@@ -10,10 +10,10 @@ export default function Sidebar({ children, position }: SidebarProps) {
 
   return (
     <div
-      className={`hidden fixed ${positionClass} top-32 w-[10%] h-[calc(100vh-128px)] lg:flex flex-col items-center justify-end text-white`}
+      className={`hidden fixed ${positionClass} top-32 w-[10%] h-[calc(100vh-128px)] lg:flex flex-col items-center justify-end bg-transparent`}
     >
       {children}
-      <div className="w-[3px] h-28 bg-stone-400"></div>
+      <div className="w-[2px] h-28 bg-accent opacity-35"></div>
     </div>
   );
 }

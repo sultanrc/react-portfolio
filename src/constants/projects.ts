@@ -16,19 +16,35 @@ export const PROJECTS: Project[] = [
     reverse: true,
   },
   {
-    title: "Early Warning System",
-    subtitle: "Featured Project",
-    description:
-      "The original Early Warning System (EWS) was built with CodeIgniter4 for backend logic and Bootstrap for the responsive frontend. This version established the core monitoring framework before being upgraded to the Vue.js/Express.js iteration.",
-    techsUsed: ["CodeIgniter4", "Bootstrap"],
-    reverse: false,
-  },
-  {
-    title: "React Portfolio Website",
+    title: "Portfolio Website V2",
     subtitle: "Featured Project",
     description:
       "A modern portfolio built with React and TypeScript, featuring a responsive design powered by Tailwind CSS. The site effectively showcases projects and skills through a clean, structured interface that highlights professional experience.",
     techsUsed: ["React.js", "Tailwind CSS", "TypeScript"],
     reverse: true,
+  },
+  {
+    title: "IoT-Based Rat Repeller",
+    subtitle: "Featured Project",
+    description:
+      "A smart IoT device designed to repel rodents using ultrasonic sound. Built with ESP32, ESP32-CAM, PIR sensor for motion detection, and buzzer to emit ultrasonic frequencies. The system detects movement and triggers sound deterrents automatically.",
+    techsUsed: ["ESP32-CAM", "PIR Sensor", "WhatsApp API"],
+    reverse: false,
+  },
+  {
+    title: "Early Warning System",
+    subtitle: "Featured Project",
+    description:
+      "The original Early Warning System (EWS) was built with CodeIgniter4 for backend logic and Bootstrap for the responsive frontend. This version established the core monitoring framework before being upgraded to the Vue.js/Express.js iteration.",
+    techsUsed: ["CodeIgniter4", "Bootstrap", "MySQL", "RedNode"],
+    reverse: false,
+  },
+  {
+    title: "Portfolio Website V1",
+    subtitle: "Featured Project",
+    description:
+      "My first portfolio website built using Vue.js and Tailwind CSS. It features a clean, minimalistic design and responsive layout to showcase projects and technical skills effectively.",
+    techsUsed: ["Vue.js", "Tailwind CSS"],
+    reverse: false,
   },
 ];

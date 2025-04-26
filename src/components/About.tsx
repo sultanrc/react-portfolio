@@ -1,34 +1,36 @@
-import profileImage from "../assets/Sultan.jpg";
 import MainHeader from "./MainHeader";
 import TechStack from "./TechStack";
 import Section from "./Section";
+import Photo from "./Photo";
 
 export default function About() {
   return (
     <Section>
-      <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 2xl:mx-20">
+      <div
+        id="about"
+        className="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:mx-16 2xl:mx-20"
+      >
         <div className="lg:w-3/5 flex flex-col">
           <MainHeader headerNumber="1" headerName="About Me" />
 
           <div className="text-xs md:text-[16px] text-stone-400 mb-4 leading-relaxed">
             <p>
-              Hello, world, I'm{" "}
-              <strong className="text-stone-300">Sultan!</strong> I build
-              websites and make them look good. I first fell in love with this
-              work in 2023 during my internship, where I got to design a
-              dashboard screen in Figma and then turn it into a real webpage
+              <strong className="text-accent">Hello, world, I'm Sultan!</strong>{" "}
+              I build websites and make them look good. I first fell in love
+              with this work in 2023 during my internship, where I got to design
+              a dashboard screen in Figma and then turn it into a real webpage
               using HTML and CSS. Seeing my designs come to life on the screen
               was so exciting – that's when I knew this was for me!
             </p>
 
             <p className="mt-4">
               As a{" "}
-              <a href="#your-link" className="text-green-300  hover:underline">
+              <a href="#experiences" className="text-accent  hover:underline">
                 fresh Computer Science graduate
               </a>
               , I’ve honed my skills further through hands-on experience,
               including an{" "}
-              <a href="#your-link" className="text-green-300  hover:underline">
+              <a href="#experiences" className="text-accent  hover:underline">
                 internship at PetroChina International Jabung Ltd
               </a>{" "}
               as an IT Support & Developer, where I bridged technical solutions
@@ -38,11 +40,7 @@ export default function About() {
 
           <TechStack />
         </div>
-        <img
-          src={profileImage}
-          alt="Profile"
-          className="w-full max-w-md lg:max-w-2xl lg:w-2/5 h-[320px] md:h-auto aspect-[3/4] object-cover border-2 border-white rounded-xl mx-auto lg:mx-0 mt-4"
-        />
+        <Photo />
       </div>
     </Section>
   );

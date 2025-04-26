@@ -1,9 +1,15 @@
 import { PROJECTS } from "../constants/projects";
 
-export default function Project() {
+type ProjectProps = {
+  showAll: boolean;
+};
+
+export default function Project({ showAll }: ProjectProps) {
+  const projectsToDisplay = showAll ? PROJECTS : PROJECTS.slice(0, 3);
+
   return (
     <div className="flex flex-col gap-10 text-right">
-      {PROJECTS.map((project, index) => (
+      {projectsToDisplay.map((project, index) => (
         <div
           key={index}
           className={`flex gap-10 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}
@@ -14,18 +20,20 @@ export default function Project() {
               index % 2 === 1 ? "text-left items-start" : "text-right items-end"
             }`}
           >
-            <p className="text-sm">{project.subtitle}</p>
-            <h1 className="text-lg font-semibold">{project.title}</h1>
-            <div className="bg-stone-800 text-stone-400 text-sm md:text-[15px] mt-4 p-3">
+            <p className="text-sm text-accent">{project.subtitle}</p>
+            <h1 className="text-lg font-semibold text-textPrimary">
+              {project.title}
+            </h1>
+            <div className="bg-stone-800 text-textSecondary text-sm md:text-[15px] mt-4 p-6">
               {project.description}
             </div>
             <div
               className={`mt-4 flex flex-wrap gap-4 text-xs ${
                 index % 2 === 1 ? "justify-start" : "justify-end"
-              } text-stone-400 tracking-wider`}
+              } text-textSecondary tracking-wider`}
             >
-              {project.techsUsed.map((techUsed, index) => (
-                <span key={index}>{techUsed}</span>
+              {project.techsUsed.map((techUsed, idx) => (
+                <span key={idx}>{techUsed}</span>
               ))}
             </div>
           </div>

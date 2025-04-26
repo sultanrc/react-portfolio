@@ -1,14 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NAV_ITEMS } from "../constants/navbar";
 import NavItems from "./NavItems";
-import { Menu, X } from "lucide-react"; // ikon hamburger
+import Resume from "./Resume";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          setShowNavbar(false);
+        } else {
+          setShowNavbar(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary text-white">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
         <div className="text-2xl font-bold h-16 w-16 bg-stone-700"></div>
 
@@ -22,19 +49,12 @@ export default function Navbar() {
               navItemNumber={navItem.navItemNumber}
             />
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="hover:text-gray-300 text-sm transition border border-white py-2 px-4 rounded-lg"
-            >
-              Resume
-            </a>
-          </li>
+          <Resume />
         </ul>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden transition-transform duration-300"
+          className="md:hidden transition-transform duration-300 text-textPrimary"
           onClick={toggleMenu}
         >
           <div
@@ -49,7 +69,7 @@ export default function Navbar() {
 
       {/* Mobile Nav Dropdown */}
       {isOpen && (
-        <ul className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary transition-all border-b border-white shadow-md">
+        <ul className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary transition-all border-b border-textPrimary shadow-md">
           {NAV_ITEMS.map((navItem, index) => (
             <NavItems
               key={index}
@@ -59,15 +79,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             />
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="hover:text-gray-300 text-sm transition border border-white py-2 px-4 rounded-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              Resume
-            </a>
-          </li>
+          <Resume onClickResume={() => setIsOpen(false)} />
         </ul>
       )}
     </nav>

@@ -14,8 +14,8 @@ export default function Tab({ selectedTabProps, onTabClick }: TabProps) {
           className={`py-3 px-8 md:px-4 md:text-left text-sm font-medium
         ${
           selectedTabProps === index
-            ? "text-white border-b-2 md:border-b-0 md:border-l-2 border-green-400"
-            : "text-stone-500 border-b-2 md:border-b-0 md:border-l-2 border-stone-700"
+            ? "text-textPrimary border-b-2 md:border-b-0 md:border-l-2 border-accent"
+            : "text-secondary border-b-2 md:border-b-0 md:border-l-2 border-inactive"
         } focus:outline-none hover:bg-stone-800 transition-colors`}
           onClick={() => onTabClick(index)}
           aria-selected={selectedTabProps === index}

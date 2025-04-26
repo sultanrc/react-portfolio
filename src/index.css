@@ -6,7 +6,7 @@ body {
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #181818;
+  background-color: #222222;
 }
 #root {
   height: 100vh;
