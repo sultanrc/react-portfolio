@@ -13,7 +13,7 @@ export default function MainHeader({
         <span className="inline-flex items-center justify-center w-6 h-6 md:w-8 md:h-8 text-sm md:text-xl border border-accent text-accent rounded-md">
           {headerNumber}
         </span>
-        <h2 className="text-lg md:text-2xl font-semibold text-textPrimary">
+        <h2 className="text-lg md:text-2xl font-semibold text-accent">
           {headerName}
         </h2>
       </div>

@@ -8,7 +8,7 @@ export default function About() {
     <Section>
       <div
         id="about"
-        className="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:mx-16 2xl:mx-20"
+        className="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:mx-16 2xl:mx-20 lg:pt-36"
       >
         <div className="lg:w-3/5 flex flex-col">
           <MainHeader headerNumber="1" headerName="About Me" />

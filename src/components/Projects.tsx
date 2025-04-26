@@ -9,7 +9,7 @@ export default function Projects() {
     <Section>
       <div
         id="projects"
-        className="flex flex-col justify-center md:justify-start gap-2 2xl:mx-40"
+        className="flex flex-col justify-center md:justify-start gap-2 2xl:mx-40 lg:pt-36"
       >
         <MainHeader headerNumber="3" headerName="Projects" />
         <Project showAll={showAll} />

@@ -14,12 +14,16 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== "undefined") {
-        if (window.scrollY > lastScrollY) {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY <= 0) {
+          setShowNavbar(true);
+        } else if (currentScrollY > lastScrollY) {
           setShowNavbar(false);
         } else {
           setShowNavbar(true);
         }
-        setLastScrollY(window.scrollY);
+
+        setLastScrollY(currentScrollY);
       }
     };
 
