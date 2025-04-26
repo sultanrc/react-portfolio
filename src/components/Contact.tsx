@@ -1,8 +1,6 @@
-// import Section from "./Section";
-
 export default function Contact() {
   return (
-    <div className="flex items-center min-h-[calc(100vh-140px)] text-white mx-4 md:mx-20 lg:mx-40 ">
+    <div className="flex items-center min-h-[calc(100vh-140px)] text-white mx-4 md:mx-20 lg:mx-40 2xl:mx-60">
       <div className="w-full flex flex-col items-center justify-center md:justify-start lg:mx-24">
         <div className="flex items-center gap-4">
           <span className="inline-flex items-center justify-center w-6 h-6 md:w-8 md:h-8 text-sm md:text-xl border border-white rounded-md">

@@ -5,7 +5,7 @@ import Project from "./Project";
 export default function Projects() {
   return (
     <Section>
-      <div className="flex flex-col justify-center md:justify-start gap-6 mx-4">
+      <div className="flex flex-col justify-center md:justify-start gap-2 2xl:mx-40">
         <MainHeader headerNumber="3" headerName="Projects" />
         <Project />
         <a

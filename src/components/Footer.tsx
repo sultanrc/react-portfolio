@@ -8,7 +8,7 @@ export default function Footer() {
         <Links />
       </div>
       <footer className="flex flex-col pb-4 items-center justify-center text-stone-400 text-sm">
-        <p>Designed and developed by</p>
+        <p>Designed and developed in 2025 by</p>
         <div className="flex py-2 gap-4">
           <p className="text-sm">Muhammad Sultan</p>
           <span>+</span>
