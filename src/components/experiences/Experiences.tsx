@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Header from "../Header";
 import Section from "../Section";
 import Experience from "./Experience";
@@ -15,13 +16,27 @@ export default function Experiences() {
     <Section>
       <div
         id="experiences"
-        className="w-full flex flex-col justify-center md:justify-start lg:mx-24  lg:pt-36"
+        className="w-full flex flex-col justify-center md:justify-start lg:mx-24 lg:pt-36"
       >
-        <Header headerNumber="2" headerName="Experiences" />
-        <div className="flex flex-col md:flex-row gap-4 md:gap-10 ">
+        <motion.div
+          className="flex flex-col gap-4 md:gap-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Header headerNumber="2" headerName="Experiences" />
+        </motion.div>
+        <motion.div
+          className="flex flex-col md:flex-row gap-4 md:gap-10"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <TabButton selectedTabProps={selectedTab} onTabClick={handleTab} />
           <Experience selectedTabProps={selectedTab} />
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

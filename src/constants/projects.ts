@@ -1,9 +1,15 @@
+import ewsvImg from "../assets/thumbnails/EWS.jpeg";
+import v1 from "../assets/thumbnails/V1.jpeg";
+import v2 from "../assets/thumbnails/V2.jpeg";
+import aptImg from "../assets/thumbnails/APT.jpg";
+
 export type Project = {
   title: string;
   subtitle: string;
   description: string;
   techsUsed: string[];
   reverse?: boolean;
+  image: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -14,6 +20,7 @@ export const PROJECTS: Project[] = [
       "Early Warning System Vue (EWSV) tracks server room temp and humidity via ESP8266 & DHT11. Data flows to a live web dashboard (Vue.js frontend, Express.js API). I built the UI with Tailwind CSS and implemented alert triggers (>30°C or >80% humidity) to prevent overheating.",
     techsUsed: ["Vue.js", "Tailwind CSS", "Express.js", "Supabase"],
     reverse: true,
+    image: ewsvImg,
   },
   {
     title: "Portfolio Website V2",
@@ -22,6 +29,7 @@ export const PROJECTS: Project[] = [
       "A modern portfolio built with React and TypeScript, featuring a responsive design powered by Tailwind CSS. The site effectively showcases projects and skills through a clean, structured interface that highlights professional experience.",
     techsUsed: ["React.js", "Tailwind CSS", "TypeScript"],
     reverse: true,
+    image: v2,
   },
   {
     title: "IoT-Based Rat Repeller",
@@ -30,6 +38,7 @@ export const PROJECTS: Project[] = [
       "A smart IoT device designed to repel rodents using ultrasonic sound. Built with ESP32, ESP32-CAM, PIR sensor for motion detection, and buzzer to emit ultrasonic frequencies. The system detects movement and triggers sound deterrents automatically.",
     techsUsed: ["ESP32-CAM", "PIR Sensor", "WhatsApp API"],
     reverse: false,
+    image: aptImg,
   },
   {
     title: "Early Warning System",
@@ -38,13 +47,15 @@ export const PROJECTS: Project[] = [
       "The original Early Warning System (EWS) was built with CodeIgniter4 for backend logic and Bootstrap for the responsive frontend. This version established the core monitoring framework before being upgraded to the Vue.js/Express.js iteration.",
     techsUsed: ["CodeIgniter4", "Bootstrap", "MySQL", "RedNode"],
     reverse: false,
+    image: ewsvImg,
   },
   {
     title: "Portfolio Website V1",
     subtitle: "Featured Project",
     description:
-      "My first portfolio website built using Vue.js and Tailwind CSS. It features a clean, minimalistic design and responsive layout to showcase projects and technical skills effectively.",
+      "My first portfolio website, built using Vue.js and Tailwind CSS, showcases my skills and projects in a clean, minimalistic design. This responsive layout adapts seamlessly to different screen sizes, ensuring that the user experience remains consistent across devices.",
     techsUsed: ["Vue.js", "Tailwind CSS"],
     reverse: false,
+    image: v1,
   },
 ];
