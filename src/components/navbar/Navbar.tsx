@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "motion/react"; // ← aktifkan ini
 import { NAV_ITEMS } from "../../constants/navbar";
 import NavItems from "./NavItems";
 import Resume from "./Resume";
@@ -35,6 +36,21 @@ export default function Navbar() {
     };
   }, [lastScrollY]);
 
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300 ${
@@ -42,20 +58,35 @@ export default function Navbar() {
       }`}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
-        <img src={sultanLogo} className="text-2xl font-bold w-12"></img>
+        {/* Logo */}
+        <motion.img
+          src={sultanLogo}
+          className="text-2xl font-bold w-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-10 text-lg font-light">
+        <motion.ul
+          className="hidden md:flex items-center gap-10 text-lg font-light"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
           {NAV_ITEMS.map((navItem, index) => (
-            <NavItems
-              key={index}
-              href={navItem.href}
-              navItemName={navItem.navItemName}
-              navItemNumber={navItem.navItemNumber}
-            />
+            <motion.div key={index} variants={itemVariants}>
+              <NavItems
+                href={navItem.href}
+                navItemName={navItem.navItemName}
+                navItemNumber={navItem.navItemNumber}
+              />
+            </motion.div>
           ))}
-          <Resume />
-        </ul>
+          <motion.div variants={itemVariants}>
+            <Resume />
+          </motion.div>
+        </motion.ul>
 
         {/* Mobile Menu Button */}
         <button

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { PROJECTS } from "../../constants/projects";
 
 type ProjectProps = {
@@ -10,9 +11,13 @@ export default function Project({ showAll }: ProjectProps) {
   return (
     <div className="flex flex-col gap-10 text-right">
       {projectsToDisplay.map((project, index) => (
-        <div
+        <motion.div
           key={index}
           className={`flex gap-10 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}
+          initial={{ opacity: 0, y: 50 }} // Mulai dari bawah
+          whileInView={{ opacity: 1, y: 0 }} // Muncul saat di-scroll ke viewport
+          viewport={{ once: true }} // Animasi hanya sekali
+          transition={{ duration: 0.3, delay: index * 0.1 }} // Delay berurutan
         >
           <img src="" alt={project.title} className="sm:w-1/2 hidden sm:flex" />
           <div
@@ -37,7 +42,7 @@ export default function Project({ showAll }: ProjectProps) {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
