@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants/experiences";
+import { EXPERIENCES } from "../../constants/experiences";
 
 type ExperienceProps = {
   selectedTabProps: number;
@@ -8,7 +8,7 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
   return (
     <div className="md:w-[75%] flex flex-col">
       <div className="flex flex-col lg:flex-row lg:gap-3">
-        <h2 className="text-lg text-textPrimary">{experience.role}</h2>
+        <h2 className="text-lg text-white font-semibold">{experience.role}</h2>
         <h2 className="text-accent text-sm md:text-lg">
           @ {experience.company}
         </h2>

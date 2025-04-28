@@ -1,6 +1,6 @@
-import reactImg from "../assets/ReactJs.svg";
-import tailwindImg from "../assets/Tailwind.svg";
-import typescriptImg from "../assets/TypeScript.svg";
+import reactImg from "../assets/techs/ReactJs.svg";
+import tailwindImg from "../assets/techs/Tailwind.svg";
+import typescriptImg from "../assets/techs/TypeScript.svg";
 
 export const FOOTER = {
   copyright: "Designed and developed by Muhammad Sultan.",

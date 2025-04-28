@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { NAV_ITEMS } from "../constants/navbar";
+import { NAV_ITEMS } from "../../constants/navbar";
 import NavItems from "./NavItems";
 import Resume from "./Resume";
+import sultanLogo from "../../assets/SLogo.png";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -41,7 +42,7 @@ export default function Navbar() {
       }`}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
-        <div className="text-2xl font-bold h-16 w-16 bg-stone-700"></div>
+        <img src={sultanLogo} className="text-2xl font-bold w-12"></img>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-10 text-lg font-light">

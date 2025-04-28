@@ -1,5 +1,5 @@
-import { FOOTER } from "../constants/footer";
-import Links from "./Links";
+import { FOOTER } from "../../constants/footer";
+import Links from "../sidebar/Links";
 
 export default function Footer() {
   return (

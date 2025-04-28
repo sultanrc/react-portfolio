@@ -19,7 +19,7 @@ export default function NavItems({
         <span className="inline-flex items-center justify-center w-5 h-5 text-xs border border-accent text-accent rounded-md">
           {navItemNumber}
         </span>
-        <span className="text-textSecondary">{navItemName}</span>
+        <span className="text-textPrimary">{navItemName}</span>
       </a>
     </li>
   );

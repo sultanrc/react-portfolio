@@ -1,5 +1,5 @@
-import Section from "./Section";
-import MainHeader from "./MainHeader";
+import Section from "../Section";
+import Header from "../Header";
 import Project from "./Project";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ export default function Projects() {
         id="projects"
         className="flex flex-col justify-center md:justify-start gap-2 2xl:mx-40 lg:pt-36"
       >
-        <MainHeader headerNumber="3" headerName="Projects" />
+        <Header headerNumber="3" headerName="Projects" />
         <Project showAll={showAll} />
         <button
           onClick={() => setShowAll(!showAll)}

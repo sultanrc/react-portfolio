@@ -6,7 +6,7 @@ export default function Contact() {
     >
       <div className="w-full flex flex-col items-center justify-center md:justify-start lg:mx-24">
         <div className="flex items-center gap-4">
-          <span className="inline-flex items-center justify-center w-6 h-6 md:w-8 md:h-8 text-sm md:text-xl border  border-accent text-accent rounded-md">
+          <span className="inline-flex items-center justify-center w-6 h-6 md:w-8 md:h-8 text-sm md:text-xl border-2 border-accent text-accent rounded-md">
             4
           </span>
           <h1 className="text-lg md:text-4xl font-semibold text-accent">

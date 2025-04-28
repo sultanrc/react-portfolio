@@ -1,4 +1,4 @@
-import { JUMBOTRON } from "../constants/jumbotron";
+import { JUMBOTRON } from "../../constants/jumbotron";
 
 export default function Jumbotron() {
   return (

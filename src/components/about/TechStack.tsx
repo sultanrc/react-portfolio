@@ -1,4 +1,4 @@
-import { TECH_STACK } from "../constants/about";
+import { TECH_STACK } from "../../constants/about";
 
 export default function TechStack() {
   return (

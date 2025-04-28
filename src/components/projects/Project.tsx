@@ -1,4 +1,4 @@
-import { PROJECTS } from "../constants/projects";
+import { PROJECTS } from "../../constants/projects";
 
 type ProjectProps = {
   showAll: boolean;

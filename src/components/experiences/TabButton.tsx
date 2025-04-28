@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants/experiences";
+import { EXPERIENCES } from "../../constants/experiences";
 
 type TabProps = {
   selectedTabProps: number;

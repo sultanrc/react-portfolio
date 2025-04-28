@@ -1,4 +1,4 @@
-import profileImage from "../assets/Sultan.jpg";
+import profileImage from "../../assets/Sultan.jpg";
 
 export default function Photo() {
   return (
@@ -8,7 +8,7 @@ export default function Photo() {
       <img
         src={profileImage}
         alt="Profile"
-        className="w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out relative z-10 border-2 border-secondary group-hover:border-accent"
+        className="w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out relative z-10 border-2 border-textSecondary group-hover:border-accent"
       />
     </div>
   );

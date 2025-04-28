@@ -1,4 +1,4 @@
-import { LINKS } from "../constants/about";
+import { LINKS } from "../../constants/about";
 
 export default function Links() {
   const iconClass = "w-6 h-6 cursor-pointer ";
