@@ -19,10 +19,15 @@ export default function Project({ showAll }: ProjectProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
-          <img
+          <motion.img
             src={project.image}
             alt={project.title}
-            className="sm:w-1/2 hidden sm:flex rounded-lg shadow-xl hover:shadow-[0_0_15px_5px_var(--accent)]"
+            className="sm:w-1/2 hidden sm:flex rounded-md shadow-xl"
+            whileHover={{
+              boxShadow: "0 0 15px 5px var(--accent)",
+              scale: 1.02,
+            }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           />
           <div
             className={`sm:w-1/2 flex flex-col ${
@@ -31,10 +36,49 @@ export default function Project({ showAll }: ProjectProps) {
                 : "text-left items-start md:text-right md:items-end"
             }`}
           >
-            <p className="text-sm text-accent">{project.subtitle}</p>
-            <h1 className="text-lg font-semibold text-textPrimary">
-              {project.title}
-            </h1>
+            <div
+              className={`w-full flex items-end justify-between gap-4 ${
+                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              }`}
+            >
+              <div className="flex flex-col">
+                <p className="text-sm text-accent">{project.subtitle}</p>
+                <h1 className="text-lg font-semibold text-textPrimary">
+                  {project.title}
+                </h1>
+              </div>
+
+              <div className="flex items-center gap-2 mt-1">
+                {project.github?.url && (
+                  <a
+                    href={project.github.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition"
+                  >
+                    <img
+                      src={project.github.icon}
+                      alt="GitHub"
+                      className="w-7 h-7"
+                    />
+                  </a>
+                )}
+                {project.link?.url && (
+                  <a
+                    href={project.link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition"
+                  >
+                    <img
+                      src={project.link.icon}
+                      alt="Live Demo"
+                      className="w-7 h-7"
+                    />
+                  </a>
+                )}
+              </div>
+            </div>
             <div className="bg-stone-800 text-textSecondary text-sm md:text-[15px] mt-4 p-6">
               {project.description}
             </div>

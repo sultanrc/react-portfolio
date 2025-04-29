@@ -2,6 +2,8 @@ import ewsvImg from "../assets/thumbnails/EWS.jpeg";
 import v1 from "../assets/thumbnails/V1.jpeg";
 import v2 from "../assets/thumbnails/V2.jpeg";
 import aptImg from "../assets/thumbnails/APT.jpg";
+import githubIcon from "../assets/links/GithubLink.svg";
+import linkIcon from "../assets/links/Link.svg";
 
 export type Project = {
   title: string;
@@ -10,6 +12,14 @@ export type Project = {
   techsUsed: string[];
   reverse?: boolean;
   image: string;
+  github: {
+    icon: string;
+    url: string;
+  };
+  link: {
+    icon: string;
+    url: string;
+  };
 };
 
 export const PROJECTS: Project[] = [
@@ -21,6 +31,14 @@ export const PROJECTS: Project[] = [
     techsUsed: ["Vue.js", "Tailwind CSS", "Express.js", "Supabase"],
     reverse: true,
     image: ewsvImg,
+    github: {
+      icon: githubIcon,
+      url: "https://github.com/username/early-warning-system-vue",
+    },
+    link: {
+      icon: linkIcon,
+      url: "https://early-warning-system-vue.vercel.app",
+    },
   },
   {
     title: "Portfolio Website V2",
@@ -30,6 +48,14 @@ export const PROJECTS: Project[] = [
     techsUsed: ["React.js", "Tailwind CSS", "TypeScript"],
     reverse: true,
     image: v2,
+    github: {
+      icon: githubIcon,
+      url: "https://github.com/username/portfolio-v2",
+    },
+    link: {
+      icon: linkIcon,
+      url: "https://portfolio-v2.vercel.app",
+    },
   },
   {
     title: "IoT-Based Rat Repeller",
@@ -39,6 +65,14 @@ export const PROJECTS: Project[] = [
     techsUsed: ["ESP32-CAM", "PIR Sensor", "WhatsApp API"],
     reverse: false,
     image: aptImg,
+    github: {
+      icon: githubIcon,
+      url: "https://github.com/username/rat-repeller",
+    },
+    link: {
+      icon: linkIcon,
+      url: "https://rat-repeller.vercel.app",
+    },
   },
   {
     title: "Early Warning System",
@@ -48,6 +82,14 @@ export const PROJECTS: Project[] = [
     techsUsed: ["CodeIgniter4", "Bootstrap", "MySQL", "RedNode"],
     reverse: false,
     image: ewsvImg,
+    github: {
+      icon: githubIcon,
+      url: "https://github.com/username/early-warning-system",
+    },
+    link: {
+      icon: linkIcon,
+      url: "https://early-warning-system.example.com",
+    },
   },
   {
     title: "Portfolio Website V1",
@@ -57,5 +99,13 @@ export const PROJECTS: Project[] = [
     techsUsed: ["Vue.js", "Tailwind CSS"],
     reverse: false,
     image: v1,
+    github: {
+      icon: githubIcon,
+      url: "https://github.com/username/portfolio-v1",
+    },
+    link: {
+      icon: linkIcon,
+      url: "https://portfolio-v1.vercel.app",
+    },
   },
 ];

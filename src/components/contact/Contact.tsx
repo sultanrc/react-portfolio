@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
 
-const fadeUp = {
+const fadeUpSimple = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
-
-const fadeUpWithDelay = (delay: number) => ({
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.2, delay } },
-});
 
 export default function Contact() {
   return (
@@ -19,7 +14,7 @@ export default function Contact() {
       <div className="w-full flex flex-col items-center justify-center md:justify-start lg:mx-24">
         <motion.div
           className="flex items-center gap-4"
-          variants={fadeUp}
+          variants={fadeUpSimple}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -31,47 +26,44 @@ export default function Contact() {
             Let's connect
           </h1>
         </motion.div>
+
         <motion.h1
           className="text-3xl md:text-[60px] font-semibold my-2 md:my-4 text-textPrimary"
-          variants={fadeUpWithDelay(0.4)}
+          variants={fadeUpSimple}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           I'm open to work!
         </motion.h1>
+
         <motion.p
           className="mt-4 mx-4 md:mx-20 text-xs md:text-lg text-stone-400 text-center"
-          variants={fadeUpWithDelay(0.6)}
+          variants={fadeUpSimple}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           I'm early in my career and actively looking for opportunities to
           grow—whether internships, freelance work, or junior developer roles.
-          While I'm still gaining experience, I'm eager to contribute, learn,
-          and collaborate on meaningful projects. If you have an opportunity or
-          just want to connect,
         </motion.p>
+
         <motion.p
           className="text-xs md:text-lg text-accent"
-          variants={fadeUpWithDelay(0.8)}
+          variants={fadeUpSimple}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           I'd love to hear from you!
         </motion.p>
-        <motion.a
+
+        <a
           href="#contact"
           className="w-fit mt-6 md:mt-10 mx-auto text-sm transition border border-textPrimary text-textPrimary py-3 px-8 rounded-lg"
-          variants={fadeUpWithDelay(1)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
         >
           Hit Me Up!
-        </motion.a>
+        </a>
       </div>
     </div>
   );

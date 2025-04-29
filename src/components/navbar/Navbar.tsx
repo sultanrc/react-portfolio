@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "motion/react"; // ← aktifkan ini
+import { motion, AnimatePresence } from "motion/react"; // ← aktifkan ini
 import { NAV_ITEMS } from "../../constants/navbar";
 import NavItems from "./NavItems";
 import Resume from "./Resume";
@@ -10,30 +10,30 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== "undefined") {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY <= 0) {
-          setShowNavbar(true);
-        } else if (currentScrollY > lastScrollY) {
-          setShowNavbar(false);
-        } else {
-          setShowNavbar(true);
-        }
+      const currentScrollY = window.scrollY;
 
-        setLastScrollY(currentScrollY);
+      // Update border state
+      setIsScrolled(currentScrollY > 0);
+
+      if (currentScrollY <= 0) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
       }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   const containerVariants = {
@@ -51,11 +51,30 @@ export default function Navbar() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const dropdownVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+      transition: { duration: 0.2 },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: { duration: 0.2 },
+    },
+  };
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300
+    ${showNavbar ? "translate-y-0" : "-translate-y-full"}
+    ${isScrolled ? "shadow-sm bg-primary/60 backdrop-blur-md" : ""}
+  `}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
         {/* Logo */}
@@ -104,20 +123,29 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Nav Dropdown */}
-      {isOpen && (
-        <ul className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary transition-all border-b border-textPrimary shadow-md">
-          {NAV_ITEMS.map((navItem, index) => (
-            <NavItems
-              key={index}
-              href={navItem.href}
-              navItemName={navItem.navItemName}
-              navItemNumber={navItem.navItemNumber}
-              onClick={() => setIsOpen(false)}
-            />
-          ))}
-          <Resume onClickResume={() => setIsOpen(false)} />
-        </ul>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            key="mobile-nav"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={dropdownVariants}
+            className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary/60 backdrop-blur-md border-b border-textPrimary shadow-md"
+          >
+            {NAV_ITEMS.map((navItem, index) => (
+              <NavItems
+                key={index}
+                href={navItem.href}
+                navItemName={navItem.navItemName}
+                navItemNumber={navItem.navItemNumber}
+                onClick={() => setIsOpen(false)}
+              />
+            ))}
+            <Resume onClickResume={() => setIsOpen(false)} />
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
