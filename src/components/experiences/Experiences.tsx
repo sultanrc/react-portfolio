@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Header from "../Header";
 import Section from "../Section";
 import Experience from "./Experience";
@@ -35,7 +35,19 @@ export default function Experiences() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <TabButton selectedTabProps={selectedTab} onTabClick={handleTab} />
-          <Experience selectedTabProps={selectedTab} />
+          <div className="md:w-[75%] flex flex-col">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedTab} // kunci supaya motion tau tab ganti
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Experience selectedTabProps={selectedTab} />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </motion.div>
       </div>
     </Section>

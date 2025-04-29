@@ -6,7 +6,7 @@ type ExperienceProps = {
 export default function Experience({ selectedTabProps }: ExperienceProps) {
   const experience = EXPERIENCES[selectedTabProps];
   return (
-    <div className="md:w-[75%] flex flex-col">
+    <>
       <div className="flex flex-col lg:flex-row lg:gap-3">
         <h2 className="text-lg text-white font-semibold">{experience.role}</h2>
         <h2 className="text-accent text-sm md:text-lg">
@@ -21,6 +21,6 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
           <li key={id}>{exp}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
