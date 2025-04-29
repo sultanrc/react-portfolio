@@ -9,11 +9,13 @@ export default function Project({ showAll }: ProjectProps) {
   const projectsToDisplay = showAll ? PROJECTS : PROJECTS.slice(0, 3);
 
   return (
-    <div className="flex flex-col lg:gap-16 text-right">
+    <div className="flex flex-col gap-10 lg:gap-20 text-right">
       {projectsToDisplay.map((project, index) => (
         <motion.div
           key={index}
-          className={`flex gap-10 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}
+          className={`flex gap-10  ${
+            index % 2 === 1 ? "flex-row-reverse" : ""
+          }`}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -22,12 +24,7 @@ export default function Project({ showAll }: ProjectProps) {
           <motion.img
             src={project.image}
             alt={project.title}
-            className="sm:w-1/2 hidden sm:flex rounded-md shadow-xl"
-            whileHover={{
-              boxShadow: "0 0 15px 5px var(--accent)",
-              scale: 1.02,
-            }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="sm:w-1/2 hidden sm:flex rounded-lg shadow-xl grayscale hover:grayscale-0 transition duration-500 object-contain"
           />
           <div
             className={`sm:w-1/2 flex flex-col ${
@@ -37,8 +34,8 @@ export default function Project({ showAll }: ProjectProps) {
             }`}
           >
             <div
-              className={`w-full flex items-end justify-between gap-4 ${
-                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              className={`w-full flex md:items-end justify-between gap-4 ${
+                index % 2 === 0 ? "flex-row md:flex-row-reverse" : "flex-row"
               }`}
             >
               <div className="flex flex-col">
@@ -59,7 +56,7 @@ export default function Project({ showAll }: ProjectProps) {
                     <img
                       src={project.github.icon}
                       alt="GitHub"
-                      className="w-7 h-7"
+                      className="w-5 h-5 md:w-7 md:h-7"
                     />
                   </a>
                 )}
@@ -73,17 +70,17 @@ export default function Project({ showAll }: ProjectProps) {
                     <img
                       src={project.link.icon}
                       alt="Live Demo"
-                      className="w-7 h-7"
+                      className="w-5 h-5 md:w-7 md:h-7"
                     />
                   </a>
                 )}
               </div>
             </div>
-            <div className="bg-stone-800 text-textSecondary text-sm md:text-[15px] mt-4 p-6">
+            <div className="bg-stone-800 text-textSecondary text-sm md:text-[15px] 2xl:text-[17px] 2xl:leading-relaxed mt-4 p-6">
               {project.description}
             </div>
             <div
-              className={`mt-4 flex flex-wrap gap-4 text-[10px] md:text-xs ${
+              className={`mt-4 flex flex-wrap gap-4 text-[10px] md:text-xs 2xl:text-sm ${
                 index % 2 === 1
                   ? "justify-start"
                   : "justify-start md:justify-end"

@@ -18,7 +18,7 @@ export default function Jumbotron() {
       y: 0,
       transition: {
         duration: 0.5,
-        delay: 1.2,
+        delay: 1.5,
       },
     },
   };

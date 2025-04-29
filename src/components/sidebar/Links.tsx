@@ -10,7 +10,7 @@ export default function Links() {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-gray-300 transition"
+          className="flex items-center gap-2 hover:text-gray-300 transition hover:animate-pulse hover:scale-150 hover:rotate-[-15deg]"
         >
           <img src={link.img} alt={link.alt} className={iconClass} />
         </a>

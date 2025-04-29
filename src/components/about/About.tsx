@@ -41,13 +41,21 @@ export default function About() {
 
               <p className="mt-4">
                 As a{" "}
-                <a href="#experiences" className="text-accent hover:underline">
+                <a
+                  href="#experiences"
+                  className="relative text-accent group inline-block"
+                >
                   fresh Computer Science graduate
+                  <span className="absolute bottom-1 left-0 w-full h-[1px] bg-textPrimary origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </a>
                 , I’ve honed my skills further through hands-on experience,
                 including an{" "}
-                <a href="#experiences" className="text-accent hover:underline">
+                <a
+                  href="#experiences"
+                  className="relative text-accent group inline-block"
+                >
                   internship at PetroChina International Jabung Ltd
+                  <span className="absolute bottom-1 left-0 w-full h-[1px] bg-textPrimary origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </a>{" "}
                 as an IT Support & Developer, where I bridged technical
                 solutions with user needs.

@@ -3,6 +3,7 @@ export const EXPERIENCES = [
     buttonName: "PetroChina Intl.",
     role: "IT Support & Developer",
     company: "PetroChina International Jabung Ltd.",
+    companyLink: "https://www.petrochina.co.id/",
     period: "Feb - June 2023",
     responsibilities: [
       "Completed on-site internship at PetroChina International Jabung Ltd. in Tanjung Jabung Timur, Jambi, working from 6 AM to 6 PM.",
@@ -15,6 +16,7 @@ export const EXPERIENCES = [
     buttonName: "Universitas Lampung",
     role: "Student",
     company: "Universitas Lampung",
+    companyLink: "https://www.unila.ac.id/",
     period: "Sep 2020 - Feb 2025",
     responsibilities: [
       "Completed Bachelor of Computer Science (S.Kom) with a GPA of 3.63 at Universitas Lampung.",

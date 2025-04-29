@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Button from "../Button";
 
 const fadeUpSimple = {
   hidden: { opacity: 0, y: 20 },
@@ -9,7 +10,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex items-center min-h-[calc(100vh-140px)] mx-4 md:mx-20 lg:mx-40 2xl:mx-60"
+      className="flex items-center min-h-[calc(100vh-140px)] mx-4 md:mx-20 lg:mx-40"
     >
       <div className="w-full flex flex-col items-center justify-center md:justify-start lg:mx-24">
         <motion.div
@@ -38,7 +39,7 @@ export default function Contact() {
         </motion.h1>
 
         <motion.p
-          className="mt-4 mx-4 md:mx-20 text-xs md:text-lg text-stone-400 text-center"
+          className="mt-4 mx-4 md:mx-20 2xl:mx-52 text-xs md:text-lg 2xl:text-xl text-stone-400 text-center"
           variants={fadeUpSimple}
           initial="hidden"
           whileInView="visible"
@@ -57,13 +58,12 @@ export default function Contact() {
         >
           I'd love to hear from you!
         </motion.p>
-
-        <a
-          href="#contact"
-          className="w-fit mt-6 md:mt-10 mx-auto text-sm transition border border-textPrimary text-textPrimary py-3 px-8 rounded-lg"
+        <Button
+          href="mailto:soeltaan@gmail.com"
+          classProps="w-fit mt-6 md:mt-10 mx-auto py-3 px-8"
         >
           Hit Me Up!
-        </a>
+        </Button>
       </div>
     </div>
   );

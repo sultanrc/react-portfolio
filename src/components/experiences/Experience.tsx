@@ -9,9 +9,15 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
     <>
       <div className="flex flex-col lg:flex-row lg:gap-3">
         <h2 className="text-lg text-white font-semibold">{experience.role}</h2>
-        <h2 className="text-accent text-sm md:text-lg">
+        <a
+          href={experience.companyLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group text-accent text-sm md:text-lg"
+        >
           @ {experience.company}
-        </h2>
+          <span className="absolute bottom-1 left-0 w-full h-[1px] bg-textPrimary origin-center scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+        </a>
       </div>
       <p className="text-textSecondary text-sm mt-1 md:mt-0 md:text-md">
         {experience.period}

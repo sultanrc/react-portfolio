@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react"; // ← aktifkan ini
 import { NAV_ITEMS } from "../../constants/navbar";
 import NavItems from "./NavItems";
-import Resume from "./Resume";
+import Button from "../Button";
 import sultanLogo from "../../assets/SLogo.png";
+import myResume from "../../assets/resume.pdf";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -73,7 +74,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300
     ${showNavbar ? "translate-y-0" : "-translate-y-full"}
-    ${isScrolled ? "shadow-sm bg-primary/60 backdrop-blur-md" : ""}
+    ${isScrolled ? "shadow-md bg-primary/60 backdrop-blur-md" : ""}
   `}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
@@ -103,7 +104,11 @@ export default function Navbar() {
             </motion.div>
           ))}
           <motion.div variants={itemVariants}>
-            <Resume />
+            <li className="flex items-center">
+              <Button href={myResume} target="_blank" rel="noopener noreferrer">
+                Resume / CV
+              </Button>
+            </li>
           </motion.div>
         </motion.ul>
 
@@ -142,7 +147,9 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               />
             ))}
-            <Resume onClickResume={() => setIsOpen(false)} />
+            <Button href={myResume} onClickButton={() => setIsOpen(false)}>
+              Resume / CV
+            </Button>
           </motion.ul>
         )}
       </AnimatePresence>
