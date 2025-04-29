@@ -8,6 +8,26 @@ body {
   overflow-x: hidden;
   background-color: #222222;
 }
+
 #root {
   height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3b3737;
+}
+
+::-webkit-scrollbar-thumb {
+  wisth: 4px;
+  background-color: #3a7d44;
+  border: 2px solid #44403c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a3f7bf;
 }

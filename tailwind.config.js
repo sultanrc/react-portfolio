@@ -13,5 +13,12 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
+  safelist: [
+    "scrollbar-thin",
+    "scrollbar-thumb-gray-400",
+    "scrollbar-thumb-green-200",
+    "scrollbar-track-gray-200",
+    "scrollbar-track-transparent",
+  ],
 };
