@@ -1,6 +1,6 @@
 import instagramIcon from "../assets/links/Instagram.svg";
 import githubIcon from "../assets/links/Github.svg";
-import linkedinIcon from "../assets/links/Linkedin.svg";
+import linkedinIcon from "../assets/links/LinkedIn.svg";
 import steamIcon from "../assets/links/Steam.svg";
 
 export const LINKS = [
