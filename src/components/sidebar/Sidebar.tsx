@@ -13,7 +13,7 @@ export default function Sidebar({ children, position }: SidebarProps) {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { duration: 0.5, delay: 2 },
+      transition: { duration: 0.5, delay: 2.2 },
     },
   };
 

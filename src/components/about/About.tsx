@@ -12,17 +12,15 @@ export default function About() {
         className="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:mx-16 2xl:mx-20 lg:pt-36"
       >
         <div className="lg:w-3/5 flex flex-col">
-          {/* Header with animation */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }} // Mulai dari bawah
-            whileInView={{ opacity: 1, y: 0 }} // Muncul saat berada di viewport
-            viewport={{ once: true }} // Hanya sekali saat pertama kali muncul
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <Header headerNumber="1" headerName="About Me" />
           </motion.div>
 
-          {/* Paragraph with animation */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,23 +61,21 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* TechStack with animation */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }} // Delay lebih panjang
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <TechStack />
           </motion.div>
         </div>
 
-        {/* Photo with animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }} // Delay lebih panjang
+          transition={{ duration: 0.6, delay: 1.3 }}
         >
           <Photo />
         </motion.div>

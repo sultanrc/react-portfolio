@@ -45,7 +45,7 @@ export default function Jumbotron() {
             {JUMBOTRON.name}
           </motion.h1>
           <motion.p
-            className="text-[22px] md:text-[40px] lg:text-[56px] font-bold text-accent"
+            className="text-[22px] md:text-[40px] lg:text-[64px] font-bold text-accent"
             variants={itemVariants}
           >
             {JUMBOTRON.tagline}
@@ -55,7 +55,7 @@ export default function Jumbotron() {
           className="text-md md:text-2xl font-light text-textSecondary max-w-xl"
           variants={itemVariants}
         >
-          I’m a <strong className="text-accent">frontend developer</strong> who
+          I’m a <strong className="text-accent">front-end developer</strong> who
           thrives on learning and innovation. Transforming ideas into stunning
           visuals and seamless digital experiences—one line of code at a time.
           <strong className="text-accent">

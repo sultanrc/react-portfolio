@@ -1,4 +1,5 @@
 import { EXPERIENCES } from "../../constants/experiences";
+import arrowIcon from "../../assets/Arrow.svg";
 
 type ExperienceProps = {
   selectedTabProps: number;
@@ -22,9 +23,16 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
       <p className="text-textSecondary text-sm mt-1 md:mt-0 md:text-md">
         {experience.period}
       </p>
-      <ul className="text-sm md:text-[15px] list-disc h-[360px] pl-5 mt-4 space-y-3 text-textSecondary leading-relaxed">
+      <ul className="text-sm md:text-[15px] h-[360px] pl-5 mt-4 space-y-3 text-textSecondary leading-relaxed">
         {experience.responsibilities.map((exp, id) => (
-          <li key={id}>{exp}</li>
+          <li key={id} className="flex items-start gap-2">
+            <img
+              src={arrowIcon}
+              alt=""
+              className="w-5 h-5 object-contain mt-1"
+            />
+            {exp}
+          </li>
         ))}
       </ul>
     </>
