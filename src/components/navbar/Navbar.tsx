@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react"; // ← aktifkan ini
+import { motion, AnimatePresence } from "motion/react";
 import { NAV_ITEMS } from "../../constants/navbar";
 import NavItems from "./NavItems";
 import Button from "../Button";
@@ -73,19 +73,21 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300
-    ${showNavbar ? "translate-y-0" : "-translate-y-full"}
+    ${showNavbar ? "translate-y-0" : "md:-translate-y-full"}
     ${isScrolled ? "shadow-md bg-primary/60 backdrop-blur-md" : ""}
   `}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
         {/* Logo */}
-        <motion.img
-          src={sultanLogo}
-          className="text-2xl font-bold w-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        />
+        <a href="/">
+          <motion.img
+            src={sultanLogo}
+            className="text-2xl font-bold w-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          />
+        </a>
 
         {/* Desktop Nav */}
         <motion.ul
