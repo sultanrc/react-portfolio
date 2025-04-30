@@ -82,7 +82,7 @@ export default function Navbar() {
         <a href="/">
           <motion.img
             src={sultanLogo}
-            className="text-2xl font-bold w-16"
+            className="text-2xl font-bold w-16 hover:scale-125 hover:rotate-6 transition duration-30 hover:animation-pulse"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}

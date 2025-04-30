@@ -71,8 +71,8 @@ export const PROJECTS: Project[] = [
       url: "https://github.com/sultanrc/iot-rat-repeller",
     },
     link: {
-      icon: "",
-      url: "",
+      icon: linkIcon,
+      url: "https://pepadun.fmipa.unila.ac.id/index.php/jurnal/article/view/239",
     },
   },
   {
