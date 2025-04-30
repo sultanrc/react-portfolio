@@ -74,7 +74,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-primary transition-transform duration-300
     ${showNavbar ? "translate-y-0" : "md:-translate-y-full"}
-    ${isScrolled ? "shadow-md bg-primary/60 backdrop-blur-md" : ""}
+    ${isScrolled ? "shadow-md md:bg-primary/60 md:backdrop-blur-md" : ""}
   `}
     >
       <div className="px-6 md:px-14 mx-auto h-20 flex justify-between items-center">
