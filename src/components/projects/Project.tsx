@@ -9,7 +9,7 @@ export default function Project({ showAll }: ProjectProps) {
   const projectsToDisplay = showAll ? PROJECTS : PROJECTS.slice(0, 3);
 
   return (
-    <div className="flex flex-col gap-10 lg:gap-20 text-right">
+    <div className="flex flex-col gap-10 lg:gap-24 text-right">
       {projectsToDisplay.map((project, index) => (
         <motion.div
           key={index}

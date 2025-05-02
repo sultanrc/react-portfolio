@@ -6,7 +6,7 @@ type SectionProps = {
 
 export default function Section({ children }: SectionProps) {
   return (
-    <div className="flex items-center min-h-screen text-white  mx-4 md:mx-20 lg:mx-40">
+    <div className="flex items-center  text-white  mx-4 md:mx-20 lg:mx-40">
       {children}
     </div>
   );
