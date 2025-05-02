@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Photo() {
   return (
-    <div className="relative w-full max-w-[200px] md:max-w-[300px] aspect-square mx-auto lg:mx-0 mt-10 group">
+    <div className="relative w-full max-w-[200px] md:max-w-[300px] lg:max-w-[220px] xl:max-w-[300px] aspect-square mx-auto lg:mx-0 mt-10 group">
       <motion.div
         className="absolute inset-0 rounded-xl border-2 border-textSecondary group-hover:border-accent"
         initial={{ rotate: 0 }}

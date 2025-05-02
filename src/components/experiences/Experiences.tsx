@@ -16,7 +16,7 @@ export default function Experiences() {
     <Section>
       <div
         id="experiences"
-        className="w-full flex flex-col justify-center md:justify-start lg:mx-24 2xl:mx-44 lg:pt-36"
+        className="w-full flex flex-col justify-center md:justify-start xl:mx-24 2xl:mx-44 lg:pt-36"
       >
         <motion.div
           className="flex flex-col gap-4 md:gap-10"
@@ -35,7 +35,7 @@ export default function Experiences() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <TabButton selectedTabProps={selectedTab} onTabClick={handleTab} />
-          <div className="md:w-[75%] flex flex-col">
+          <div className="lg:w-[75%] flex flex-col">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedTab} // kunci supaya motion tau tab ganti

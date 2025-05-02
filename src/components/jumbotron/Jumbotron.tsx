@@ -45,7 +45,7 @@ export default function Jumbotron() {
             {JUMBOTRON.name}
           </motion.h1>
           <motion.p
-            className="text-[22px] md:text-[40px] lg:text-[64px] font-bold text-accent"
+            className="text-[22px] md:text-[40px] lg:text-[50px] xl:text-[64px] font-bold text-accent"
             variants={itemVariants}
           >
             {JUMBOTRON.tagline}

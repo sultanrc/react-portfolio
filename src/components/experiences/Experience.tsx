@@ -8,7 +8,7 @@ export default function Experience({ selectedTabProps }: ExperienceProps) {
   const experience = EXPERIENCES[selectedTabProps];
   return (
     <>
-      <div className="flex flex-col lg:flex-row lg:gap-3">
+      <div className="flex flex-col xl:flex-row xl:gap-3">
         <h2 className="text-lg text-white font-semibold">{experience.role}</h2>
         <a
           href={experience.companyLink}
