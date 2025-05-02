@@ -9,7 +9,7 @@ export default function About() {
     <Section>
       <div
         id="about"
-        className="flex flex-col lg:flex-row gap-10 lg:gap-20  xl:mx-16 2xl:mx-20 lg:pt-36"
+        className="flex flex-col lg:flex-row gap-10 lg:gap-20  xl:mx-16 2xl:mx-20  xl:pt-36"
       >
         <div className="lg:w-3/5 flex flex-col">
           <motion.div

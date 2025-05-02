@@ -54,18 +54,18 @@ export default function Navbar() {
 
   const dropdownVariants = {
     hidden: {
-      opacity: 0,
+      opacity: 1,
       y: -10,
-      transition: { duration: 0.2 },
+      transition: { duration: 0.3 },
     },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.3 },
+      transition: { duration: 0.5 },
     },
     exit: {
       opacity: 0,
-      y: -10,
+      y: -50,
       transition: { duration: 0.2 },
     },
   };
@@ -91,7 +91,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <motion.ul
-          className="hidden md:flex items-center gap-10 text-lg font-light"
+          className="hidden md:flex items-center gap-6 lg:gap-10 text-lg font-light"
           variants={containerVariants}
           initial="hidden"
           animate="show"
@@ -138,7 +138,7 @@ export default function Navbar() {
             animate="visible"
             exit="exit"
             variants={dropdownVariants}
-            className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary/60 backdrop-blur-md border-b border-textPrimary shadow-md"
+            className="md:hidden flex flex-col items-center gap-6 py-6 text-lg font-light bg-primary border-b border-textPrimary shadow-md"
           >
             {NAV_ITEMS.map((navItem, index) => (
               <NavItems
