@@ -16,7 +16,7 @@ export default function Experiences() {
     <Section>
       <div
         id="experiences"
-        className="w-full flex flex-col justify-center md:justify-start xl:mx-24 2xl:mx-44 pt-20 sm:pt-24 xl:pt-36"
+        className="w-full flex flex-col justify-center md:justify-start xl:mx-24 2xl:mx-44 pt-20 sm:pt-24 xl:pt-48"
       >
         <motion.div
           className="flex flex-col gap-4 md:gap-10"
