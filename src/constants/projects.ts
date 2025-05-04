@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     },
     link: {
       icon: linkIcon,
-      url: "https://early-warning-system-vue.vercel.app",
+      url: "https://ews-vue.vercel.app",
     },
   },
   {
