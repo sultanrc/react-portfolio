@@ -24,7 +24,7 @@ export default function Project({ showAll }: ProjectProps) {
           <motion.img
             src={project.image}
             alt={project.title}
-            className="sm:w-1/2 hidden sm:flex rounded-lg shadow-xl grayscale hover:grayscale-0 transition duration-500 object-contain"
+            className="sm:w-1/2 hidden sm:flex rounded-lg  grayscale hover:grayscale-0 transition duration-500 object-contain"
           />
           <div
             className={`sm:w-1/2 flex flex-col ${
