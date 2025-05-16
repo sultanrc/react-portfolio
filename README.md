@@ -23,6 +23,5 @@ A modern and responsive personal portfolio website built with **React**, **TypeS
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/sultanrc/react-portfolio
 ```
