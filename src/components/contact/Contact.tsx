@@ -45,8 +45,9 @@ export default function Contact() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          I'm early in my career and actively looking for opportunities to
-          grow—whether internships, freelance work, or junior developer roles.
+          Currently working as an Instrument Engineer. Despite my current role,
+          i'm still actively looking for opportunities to grow—whether
+          internships, freelance work, or junior FE or FS developer roles.
         </motion.p>
 
         <motion.p

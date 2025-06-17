@@ -1,5 +1,19 @@
 export const EXPERIENCES = [
   {
+    buttonName: "PT. NA",
+    role: "Instrument Engineer",
+    company: "PT. Nusacitra Anugerahpratama",
+    companyLink:
+      "https://www.linkedin.com/company/pt-nusacitra-anugerahpratama/",
+    period: "May 2025 - Present",
+    responsibilities: [
+      "Supervised instrumentation-related work in the field, especially in level switch project at PT. Pertamina (Persero) Integrated Terminal Jakarta.",
+      "Handled and organized technical documentation related to instrumentation activities.",
+      "Coordinated with vendors and contractors, reviewed technical documents, and supported installation and testing processes.",
+      "Conducted occasional site visits to monitor project progress, ensure engineering compliance, and assist with field troubleshooting.",
+    ],
+  },
+  {
     buttonName: "PetroChina Intl.",
     role: "IT Support & Developer",
     company: "PetroChina International Jabung Ltd.",
