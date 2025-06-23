@@ -1,7 +1,7 @@
 export const EXPERIENCES = [
   {
     buttonName: "PT. NA",
-    role: "Instrument Engineer",
+    role: "Instrument Supervisor",
     company: "PT. Nusacitra Anugerahpratama",
     companyLink:
       "https://www.linkedin.com/company/pt-nusacitra-anugerahpratama/",
